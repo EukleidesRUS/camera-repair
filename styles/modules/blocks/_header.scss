@@ -1,0 +1,55 @@
+.header {
+  @include flex;
+  @include independence-blocks;
+  @include font;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0 160px 0;
+  box-sizing: border-box;
+  transition: $transition;;
+  border: 1px solid red;
+
+  @include desktop {
+  }
+
+  @include laptop {
+    padding: 0 100px 0;
+  }
+
+  @include tablets {
+    padding: 0 60px 0;
+  }
+
+  @include mobile {
+    padding: 0 20px 0;
+  }
+
+  &__title {
+    @include font-style(400, 112px, 1, $primary-font-color);
+    margin: 60px 0 20px;
+    transition: $transition;
+    @include tablets {
+      @include font-style(400, 70px, 90px, $primary-font-color);
+      margin: 70px 0;
+    }
+    @include mobile {
+      @include font-style(400, 50px, 60px, $primary-font-color);
+      margin: 60px 0 10px;
+    }
+  }
+
+  &__subtitle {
+    @include font-style(400, 80px, 70px, $primary-font-color);
+    margin: 0 0 230px;
+    transition: $transition;
+    @include tablets {
+      @include font-style(400, 50px, 60px, $primary-font-color);
+      margin: 0 0 470px;
+    }
+    @include mobile {
+      @include font-style(400, 30px, 38px, $primary-font-color);
+      margin: 0 0 260px;
+    }
+  }
+}
+

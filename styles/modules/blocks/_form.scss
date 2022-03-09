@@ -1,0 +1,71 @@
+.form {
+  @include independence-blocks;
+  @include flex;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+
+  &__container {
+    @include flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    transition: $transition;
+
+    @include tablets {
+      align-self: center;
+    }
+  }
+
+  &__input {
+    @include input;
+    @include font-style(400, 14px, 24px, $primary-font-color);
+    letter-spacing: 0.375px;
+    padding: 13px 16px;
+    border-radius: 8px 0 0 8px;
+    box-sizing: border-box;
+    transition: $transition;
+
+    @include laptop {
+      max-width: 100%
+    }
+  }
+
+  &__submit-button {
+    @include btn();
+    @include font-style(400, 14px, 24px, $primary-font-color);
+    position: relative;
+    border-radius: 0 8px 8px 0;
+    transition: all 0.2s ease-out;
+
+    @include mobile-small {
+      font-size: 0;
+      width: 50px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        width: 11px;
+        height: 10px;
+        background-image: url('../../../images/✌️.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  &__label {
+    @include font-style(400, 12px, 18px, $form-button-color);
+    margin: 12px 0 60px 10px;
+    @include tablets {
+      margin: 10px 0 32px 10px;
+    }
+     @include mobile {
+       margin: 10px 0 20px 2px;
+     }
+  }
+}

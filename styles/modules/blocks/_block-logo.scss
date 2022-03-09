@@ -1,0 +1,22 @@
+.block-logo {
+  @include flex;
+  @include independence-blocks;
+  flex-direction: row;
+
+  &__logo {
+    @include font-style(400, 22px, 30px, $primary-font-color);
+    padding: 0 20px 0 0;
+    transition: $transition;
+    @include mobile {
+      padding: 0 16px 0 0;
+    }
+  }
+
+  &__status {
+    @include font-style(400, 12px, 12px, $primory-font-reverseColor);
+    @include independence-blocks;
+    background-color: $background-status-color;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+}

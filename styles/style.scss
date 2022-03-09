@@ -1,1 +1,22 @@
+@import "../vendor/normalize.css";
+@import "../vendor/fonts/fonts.css";
+@import "../styles/modules/blocks/html";
+
+@import "./modules/variables/transition";
+@import "./modules/variables/index";
+@import "./modules/mixins/mixins";
+
+@import "./modules/blocks/page";
+@import "./modules/blocks/header";
+@import "./modules/blocks/block-logo";
+@import "./modules/blocks/form";
+@import "./modules/blocks/content";
+@import "./modules/blocks/section";
+@import "./modules/blocks/photo-collage";
+@import "./modules/blocks/intro";
+@import "./modules/blocks/services";
+@import "./modules/blocks/warranty";
+@import "./modules/blocks/support";
+@import "./modules/blocks/footer";
+
 

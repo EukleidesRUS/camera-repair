@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="html" lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -15,15 +15,17 @@
   <header class="header">
     <div class="block-logo">
       <a href="#" class="block-logo__logo">C-Works</a>
-      <p class="block-logo__status">Мы открылись</p>
+      <p class="block-logo__status">мы открылись</p>
     </div>
     <h1 class="header__title">Ремонт</h1>
     <h2 class="header__subtitle">Плёночных фотоаппаратов</h2>
-    <form action="#" method="get" class="form-email" name="form-email">
-      <input type="email" class="form__input" name="form-input">
-      <button class="form__submit-button" type="submit">Отремонтируйте камеру ✌️</button>
+    <form action="#" method="get" class="form" name="form-email">
+      <div class="form__container">
+        <input type="email" class="form__input" name="form-input">
+        <button class="form__submit-button" type="submit">Отремонтируйте камеру ✌️</button>
+      </div>
+      <label class="form__label">Напишите нам и мы свяжемся с вами</label>
     </form>
-    <p class="header__inscription">Напишите нам и мы свяжемся с вами</p>
   </header>
 
   <main class="content">
@@ -94,16 +96,18 @@
     <hr class="footer__line">
     <div class="footer__block-logo block-logo">
       <a href="#" class="block-logo__logo">C-Works</a>
-      <div class="block-logo__status-open">Мы открылись</div>
+      <div class="block-logo__status-open">мы открылись</div>
     </div>
-    <form action="#" method="get" class="form-email" name="form-email">
-      <input type="email" class="form__input" name="form-input">
-      <button class="form__submit-button" type="submit">Отремонтируйте камеру ✌️</button>
+    <form action="#" method="get" class="form" name="form-email">
+      <div class="form__container">
+        <input type="email" class="form__input" name="form-input">
+        <button class="form__submit-button" type="submit">Отремонтируйте камеру ✌️</button>
+      </div>
+      <div class="footer__inscription">
+        <label class="form__label">Напишите нам и мы свяжемся с вами</label>
+        <p class="footer__copyright">© C-Works, 2021.</p>
+      </div>
     </form>
-    <div class="footer__inscription-block">
-      <p class="footer__inscription">Напишите нам и мы свяжемся с вами</p>
-      <p class="footer__copyright">© C-Works, 2021.</p>
-    </div>
   </footer>
 </body>
 

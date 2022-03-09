@@ -1,0 +1,111 @@
+//медиавыражения
+@mixin desktop {
+  @media screen and (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin mobile-small {
+  @media screen and (max-width: $mobile-small) {
+    @content;
+  }
+}
+
+//сброс внутренних и внешних отступов у блоков
+@mixin independence-blocks {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+//шрифт
+@mixin font {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+}
+
+//оформление текста
+@mixin font-style($weight: 400, $size: 24px, $line-height: 1, $color: $primary-font-color) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+  text-decoration: none;
+}
+
+//шаблон кнопок
+@mixin btn($border-radius: 8px) {
+  display: inline-block;
+  border: none;
+  border-radius: $border-radius;
+  color: $primary-font-color;
+  background-color: $form-button-color;
+  cursor: url(../../../images/Pointer.png), pointer;
+  outline: none;
+  max-width: 221px;
+  min-width: 50px;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  box-sizing: border-box;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+//шаблон input
+@mixin input {
+  max-width: 348px;
+  min-width: 229px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: $primary-font-color;
+  text-align: left;
+  text-decoration: none;
+  border-radius: 8px 0 8px;
+  background-color: $form-input-color;
+  cursor: url(../../../images/Pointer.png), pointer;
+
+  &:hover {
+    background-color: $form-input-colorHover;
+  }
+
+}
+
+
+
+
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
