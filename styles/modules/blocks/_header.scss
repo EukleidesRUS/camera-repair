@@ -6,11 +6,9 @@
   width: 100%;
   padding: 0 160px 0;
   box-sizing: border-box;
-  transition: $transition;;
-  border: 1px solid red;
+  transition: $transition;
 
-  @include desktop {
-  }
+  @include desktop {}
 
   @include laptop {
     padding: 0 100px 0;
@@ -28,10 +26,12 @@
     @include font-style(400, 112px, 1, $primary-font-color);
     margin: 60px 0 20px;
     transition: $transition;
+
     @include tablets {
       @include font-style(400, 70px, 90px, $primary-font-color);
       margin: 70px 0;
     }
+
     @include mobile {
       @include font-style(400, 50px, 60px, $primary-font-color);
       margin: 60px 0 10px;
@@ -42,14 +42,27 @@
     @include font-style(400, 80px, 70px, $primary-font-color);
     margin: 0 0 230px;
     transition: $transition;
+
     @include tablets {
       @include font-style(400, 50px, 60px, $primary-font-color);
       margin: 0 0 470px;
     }
+
     @include mobile {
       @include font-style(400, 30px, 38px, $primary-font-color);
       margin: 0 0 260px;
     }
   }
-}
 
+  &__form {
+    margin-bottom: 60px;
+
+    @include tablets {
+      margin-bottom: 32px;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+}

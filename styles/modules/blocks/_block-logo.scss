@@ -6,7 +6,9 @@
   &__logo {
     @include font-style(400, 22px, 30px, $primary-font-color);
     padding: 0 20px 0 0;
+    cursor: url(../../../images/Pointer.png), pointer;
     transition: $transition;
+
     @include mobile {
       padding: 0 16px 0 0;
     }

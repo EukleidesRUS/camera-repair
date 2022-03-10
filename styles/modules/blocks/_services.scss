@@ -1,0 +1,49 @@
+.services {
+  @include grid(1fr 1fr);
+  width: 100%;
+  transition: $transition;
+
+  @include laptop {
+    @include grid(1fr);
+  }
+
+  &__offer-card {
+    @include card-large;
+    text-decoration: none;
+  }
+
+  &__type-span {
+    @include font-style(400, 18px, 18px, $font-secondary-color);
+  }
+
+  &__type-title {
+    @include font-style(400, 32px, 32px, $primary-font-color);
+    margin: 20px 0 40px;
+    transition: $transition;
+
+    @include mobile {
+      @include font-style(400, 24px, 32px, $primary-font-color);
+      margin: 10px 0 28px;
+    }
+  }
+
+  &__description {
+    @include font-style(400, 32px, 40px, $font-secondary-color);
+    margin-bottom: 40px;
+    transition: $transition;
+
+    @include mobile {
+      @include font-style(400, 12px, 18px, $font-secondary-color);
+      margin-bottom: 100px;
+    }
+  }
+
+  &__price {
+    @include font-style(400, 14px, 14px, $font-price-color);
+    transition: $transition;
+
+    @include mobile {
+      @include font-style(400, 12px, 18px, $font-price-color);
+    }
+  }
+}

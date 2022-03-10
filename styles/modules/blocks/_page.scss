@@ -14,5 +14,8 @@
   padding: 60px 0px;
   background-color: $background-page-color;
   box-sizing: border-box;
-}
 
+  @include mobile {
+    padding: 20px 0;
+  }
+}
