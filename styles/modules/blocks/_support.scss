@@ -1,0 +1,44 @@
+.support {
+  width: 100%;
+  transition: $transition;
+
+  &__title {
+    margin-bottom: 90px;
+    transition: $transition;
+
+    @include tablets {
+      margin-bottom: 80px;
+    }
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__link-email {
+    @include btn;
+    max-width: max-content;
+    padding: 13px 30px;
+    transition: $transition;
+
+    @include mobile {
+      max-width: 100%;
+      padding: 16px 30px;
+    }
+  }
+
+  &__description {
+    @include font-style(400, 32px, 40px, $font-secondary-color);
+    padding: 50px 0 0;
+
+    @include tablets {
+      @include font-style(400, 20px, 30px, $font-secondary-color);
+      padding: 40px 0 0;
+    }
+
+    @include mobile {
+      @include font-style(400, 12px, 18px, $font-secondary-color);
+      padding: 40px 0 0;
+    }
+  }
+}

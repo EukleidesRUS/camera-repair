@@ -1,0 +1,51 @@
+.warranty {
+  width: 100%;
+  transition: $transition;
+
+  &__title {
+    margin-bottom: 60px;
+
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list {
+    @include independence-blocks;
+    @include grid(1fr 1fr 1fr 1fr);
+    list-style: none;
+
+    @include laptop {
+      @include grid(1fr 1fr);
+    }
+
+    @include mobile {
+      @include grid(1fr);
+    }
+  }
+
+  &__item {
+    @include card-small;
+  }
+
+  &__item-link {
+    text-decoration: none;
+  }
+
+  &__item-title {
+    @include font-style(400, 18px, 18px, $font-span);
+    margin-bottom: 38px;
+
+    @include mobile {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__item-description {
+    @include font-style(400, 15px, 19px, $font-secondary-color);
+
+    @include mobile {
+      @include font-style(400, 12px, 18px, $font-secondary-color);
+    }
+  }
+}

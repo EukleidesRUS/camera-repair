@@ -1,0 +1,151 @@
+//медиавыражения
+@mixin desktop {
+  @media screen and (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin mobile-small {
+  @media screen and (max-width: $mobile-small) {
+    @content;
+  }
+}
+
+//сброс внутренних и внешних отступов у блоков
+@mixin independence-blocks {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin grid ($col: 1fr, $rows: auto, $gap: 20px) {
+  display: grid;
+  grid-template-columns: $col;
+  grid-template-rows: $rows;
+  gap: $gap;
+}
+
+//шрифт
+@mixin font {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+}
+
+//оформление текста
+@mixin font-style($weight: 400, $size: 24px, $line-height: 1, $color: $primary-font-color) {
+  margin: 0;
+  padding: 0;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+  text-decoration: none;
+}
+
+//шаблон кнопок
+@mixin btn($border-radius: 8px) {
+  @include font-style(400, 14px, 24px, $primary-font-color);
+  letter-spacing: 0.375px;
+  display: inline-block;
+  border: none;
+  border-radius: $border-radius;
+  color: $primary-font-color;
+  background-color: $form-button-color;
+  cursor: url(../../../images/Pointer.png), pointer;
+  outline: none;
+  max-width: 221px;
+  min-width: 50px;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  box-sizing: border-box;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @include mobile {
+    @include font-style(400, 12px, 18px, $primary-font-color);
+  }
+}
+
+//шаблон input
+@mixin input {
+  max-width: 348px;
+  min-width: 229px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: $primary-font-color;
+  text-align: left;
+  text-decoration: none;
+  border-radius: 8px 0 8px;
+  background-color: $form-input-color;
+  cursor: url(../../../images/Pointer.png), pointer;
+
+  &:hover {
+    background-color: $form-input-colorHover;
+  }
+}
+
+@mixin card-large {
+  width: 100%;
+  height: 100%;
+  min-height: 282px;
+  padding: 40px;
+  border-radius: 16px;
+  background-color: $background-card-color;
+  cursor: url(../../../images/Hand.jpg), pointer;
+  box-sizing: border-box;
+  transition: $transition;
+
+  @include mobile {
+    padding: 20px;
+  }
+
+  &:hover {
+    background-color: $form-input-colorHover;
+  }
+}
+
+@mixin card-small {
+  width: 100%;
+  height: 100%;
+  min-height: 148px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: $background-card-color;
+  cursor: url(../../../images/Hand.jpg), pointer;
+  box-sizing: border-box;
+  transition: $transition;
+
+  &:hover {
+    background-color: $form-input-colorHover;
+  }
+}

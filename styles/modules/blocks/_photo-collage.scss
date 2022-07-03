@@ -1,0 +1,61 @@
+.photo-collage {
+  @include grid;
+  gap: 20px;
+  padding: 60px 30px;
+  width: 100%;
+  box-sizing: border-box;
+
+  @include tablets {
+    padding: 20px 60px;
+  }
+
+  @include mobile {
+    padding: 20px;
+  }
+
+  &__top {
+    @include grid ((auto 1fr), auto, 20px);
+
+    &::after {
+      content: "";
+      @include independence-blocks;
+      width: 100%;
+      min-width: 180px;
+      height: 100%;
+      min-height: 67px;
+      background-color: $grid-top-color;
+      border-radius: 10px;
+    }
+
+    @include mobile {
+      @include grid ((minmax(280px, 1fr)), auto, 20px);
+    }
+  }
+
+  &__bottom {
+    @include grid ((1fr minmax(455px, 730px)), auto, 20px);
+
+    &::before {
+      content: "";
+      @include independence-blocks;
+      width: 100%;
+      min-width: 173px;
+      height: 100%;
+      min-height: 124px;
+      background-color: $grid-bottom-color;
+      border-radius: 10px;
+    }
+
+    @include mobile {
+      @include grid ((minmax(280px, 1fr)), auto, 20px);
+    }
+  }
+
+  &__image {
+    @include independence-blocks;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}

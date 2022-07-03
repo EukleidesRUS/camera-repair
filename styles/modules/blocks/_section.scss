@@ -1,0 +1,28 @@
+.section {
+  @include independence-blocks;
+  padding: 60px 160px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+  @include tablets {
+    padding: 60px;
+  }
+
+  @include mobile {
+    padding: 40px 20px 30px;
+  }
+
+  &__title {
+    @include independence-blocks;
+    @include font-style(400, 32px, 40px, $primary-font-color);
+
+    @include tablets {
+      @include font-style(400, 20px, 30px, $primary-font-color);
+    }
+
+    @include mobile {
+      @include font-style(400, 12px, 18px, $primary-font-color);
+    }
+  }
+}

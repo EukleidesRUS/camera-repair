@@ -1,0 +1,57 @@
+.footer {
+  @include independence-blocks;
+  @include flex;
+  align-items: flex-start;
+  width: 100%;
+  padding: 180px 160px 0;
+  box-sizing: border-box;
+  transition: $transition;
+
+  @include tablets {
+    padding: 150px 60px 0;
+  }
+
+  @include mobile {
+    padding: 150px 20px 0px;
+  }
+
+  &__block-logo {
+    justify-content: flex-start;
+    width: 100%;
+    border-top: 2px solid #151515;
+    padding: 60px 0 84px;
+    transition: $transition;
+
+    @include mobile {
+      padding: 30px 0 184px;
+    }
+  }
+
+  &__inscription {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    @include tablets {
+      flex-direction: column;
+    }
+  }
+
+  &__label {
+    margin-left: 0;
+  }
+
+  &__copyright {
+    @include font-style(400, 12px, 18px, $form-button-color);
+    padding: 0 0 0 10px;
+
+    @include tablets {
+      padding: 60px 0 0;
+    }
+
+    @include mobile {
+      padding: 40px 0 0;
+    }
+  }
+}
